@@ -108,32 +108,33 @@ function verification(id){
     function verif(a, b, c, d){
         d = casePlayed;
         if(d === a && d === b && d === c && d !== undefined){
-                compteurWin();
-                $('th').toggleClass('topCol');
-            }
+            compteurWin();
+            $('th').toggleClass('topCol');
+            $('#reset').html('Recommencer une partie');
+        }
         if (turnCount === 42) {
-                $('#draw').html(++draw);
-                alert('Match Nul !');
-            }
-
+            $('#draw').html(++draw);
+            alert('Match Nul !');
+            $('#reset').html('Recommencer une partie');
+        }
     }
 
     //Cases en dessous
     return verif(around(vert.bot1), around(vert.bot2), around(vert.bot3)) ||
-    //Cases latérales
-    verif(around(hori.left3), around(hori.left2), around(hori.left1)) ||
-    verif(around(hori.left2), around(hori.left1), around(hori.right1)) ||
-    verif(around(hori.left1), around(hori.right1), around(hori.right2)) ||
-    verif(around(hori.right1), around(hori.right2), around(hori.right3)) ||
-    //Cases diagonales
-    verif(around(diag.topLeft3), around(diag.topLeft2), around(diag.topLeft1)) ||
-    verif(around(diag.topLeft2), around(diag.topLeft1), around(diag.botRight1)) ||
-    verif(around(diag.topLeft1), around(diag.botRight1), around(diag.botRight2)) ||
-    verif(around(diag.botRight1), around(diag.botRight2), around(diag.botRight3)) ||
-    verif(around(diag.botLeft3), around(diag.botLeft2), around(diag.botLeft1)) ||
-    verif(around(diag.botLeft2), around(diag.botLeft1), around(diag.topRight1)) ||
-    verif(around(diag.botLeft1), around(diag.topRight1), around(diag.topRight2)) ||
-    verif(around(diag.topRight1), around(diag.topRight2), around(diag.topRight3));
+        //Cases latérales
+        verif(around(hori.left3), around(hori.left2), around(hori.left1)) ||
+        verif(around(hori.left2), around(hori.left1), around(hori.right1)) ||
+        verif(around(hori.left1), around(hori.right1), around(hori.right2)) ||
+        verif(around(hori.right1), around(hori.right2), around(hori.right3)) ||
+        //Cases diagonales
+        verif(around(diag.topLeft3), around(diag.topLeft2), around(diag.topLeft1)) ||
+        verif(around(diag.topLeft2), around(diag.topLeft1), around(diag.botRight1)) ||
+        verif(around(diag.topLeft1), around(diag.botRight1), around(diag.botRight2)) ||
+        verif(around(diag.botRight1), around(diag.botRight2), around(diag.botRight3)) ||
+        verif(around(diag.botLeft3), around(diag.botLeft2), around(diag.botLeft1)) ||
+        verif(around(diag.botLeft2), around(diag.botLeft1), around(diag.topRight1)) ||
+        verif(around(diag.botLeft1), around(diag.topRight1), around(diag.topRight2)) ||
+        verif(around(diag.topRight1), around(diag.topRight2), around(diag.topRight3));
 }
 
 function compteurWin(){
