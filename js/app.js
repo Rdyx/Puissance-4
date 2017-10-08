@@ -8,10 +8,8 @@ var score2 = 0;
 var board = $('#board');
 
 for(var i = 0; i < col; i++){
-    $('#tableHead').append('<th class="col-auto yellow text-center" id="' + i + '">' + downArrow + '</th>');
+    $('#tableHead').append('<th class="col-auto yellow topCol text-center" id="' + i + '">' + downArrow + '</th>');
 }
-
-$('th').addClass('topCol');
 
 for(var j = 0; j < row; j++){
     board.append('<tr id="ligne' + j + '">');
@@ -31,8 +29,6 @@ $('.topCol').click(function(){
         for (var i = row - 1; i > -1; i--) {
             array.push(Number(ligneId + i) + 10);
         }
-
-
 
         for (var j = 0; j < row && !trouve; j++) {
             if ($('#' + array[j]).hasClass('white')) {
