@@ -104,12 +104,12 @@ function verification(id){
         right1 : Number(id)+10
     };
 
-    //A modifier, en cas de win sur 42eme coup, mauvais fonctionnement
+    //A modifier, en cas de win sur 42eme coup (dernier possible) mauvais fonctionnement.
     function verif(a, b, c, d){
         d = casePlayed;
         if(d === a && d === b && d === c && d !== undefined){
             compteurWin();
-            $('th').toggleClass('topCol');
+            $('th').removeClass('topCol');
             $('#reset').html('Recommencer une partie');
         }
         if (turnCount === 42) {
@@ -149,7 +149,8 @@ function compteurWin(){
 
 function reset(){
     $('td').removeClass('red yellow').addClass('white');
-    $('th').removeClass('red').addClass('yellow');
+    $('th').removeClass('red').addClass('yellow topCol');
     $('#player').html('Joueur 1');
     turnCount = 0;
+    $('#reset').html('Recommencer la partie');
 }
