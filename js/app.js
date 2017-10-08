@@ -1,20 +1,20 @@
 var col = 7;
 var row = 6;
 var turnCount = 0;
-var downArrow = '<img class="embed-responsive-16by9" src="https://www.techwalla.com/ui/images/icons/down4.svg" alt="Jouer cette colonne">';
+var downArrow = '<img class="img-fluid" src="https://www.techwalla.com/ui/images/icons/down4.svg" alt="Jouer cette colonne">';
 var draw = 0;
 var score1 = 0;
 var score2 = 0;
 var board = $('#board');
 
 for(var i = 0; i < col; i++){
-    $('#tableHead').append('<th class="col-auto yellow topCol text-center" id="' + i + '">' + downArrow + '</th>');
+    $('#tableHead').append('<th class="yellow topCol text-center" id="' + i + '">' + downArrow + '</th>');
 }
 
 for(var j = 0; j < row; j++){
     board.append('<tr id="ligne' + j + '">');
     for(var k = 0; k < col; k++){
-        $('#ligne' + j).append('<td class="col-auto white" id="'+ (k+1) + j  +'"> </td>');
+        $('#ligne' + j).append('<td class="white" id="'+ (k+1) + j  +'"> </td>');
     }
     board.append('</tr>');
 }
