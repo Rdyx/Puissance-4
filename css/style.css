@@ -1,0 +1,19 @@
+th:hover {
+    background-color: grey;
+}
+
+td {
+    height: 50px;
+}
+
+.white {
+    background-color: white;
+}
+
+.red, red:hover {
+    background-color: red;
+}
+
+.yellow, yellow:hover {
+    background-color: yellow;
+}

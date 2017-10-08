@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Puissace 4TW !</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <table class="table table-striped table-bordered text-center" id="board">
+            <tbody>
+            <tr id="tableHead">
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered text-center">
+            <tr>
+                <td><h4 id="player">Joueur 1</h4></td>
+                <td>
+                    <ul class="list-inline">
+                        <li><h4>Joueur 1</h4></li>
+                        <li><h4 id="score1">0</h4></li>
+                    </ul>
+                </td>
+                <td><ul class="list-inline">
+                    <li><h4>Match Nul</h4></li>
+                    <li><h4 id="draw">0</h4></li>
+                </ul></td>
+                <td>
+                    <ul class="list-inline">
+                        <li><h4>Joueur 2</h4></li>
+                        <li><h4 id="score2">0</h4></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <button id="reset" class="btn btn-success">Recommencer la partie</button>
+        <button id="hardReset" class="btn btn-danger">Tout recommencer</button>
+    </div>
+</div>
+<script src="js/http_code.jquery.com_jquery-2.0.0.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
