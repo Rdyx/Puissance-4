@@ -108,7 +108,7 @@ function verification(id){
         right1 : Number(id)+10
     };
 
-
+    //A modifier, en cas de win sur 42eme coup, mauvais fonctionnement
     function verif(a, b, c, d){
         d = casePlayed;
         if(d === a && d === b && d === c && d !== undefined){
