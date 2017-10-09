@@ -10,7 +10,20 @@
     <title>Puissace 4TW !</title>
 </head>
 <body>
-<div class="container-fluid">
+<div id="inputs" class="container-fluid text-center">
+    <div class="col-12 mt-5">
+        <h4>Noms des joueurs (moins de 15 caractères).</h4>
+    </div>
+    <div class="col-12 mt-3">
+        <input id="inputPlayer1" type="text" placeholder="Joueur 1">
+        <input id="inputPlayer2" type="text" placeholder="Joueur 2">
+    </div>
+    <div class="col-12 mt-3">
+        <button id="start" class="btn btn-warning">Valider</button>
+    </div>
+
+</div>
+<div id="game" class="container-fluid hidden">
     <div class="row justify-content-around">
         <table class="table table-bordered" id="board">
             <tbody>
@@ -20,20 +33,22 @@
         </table>
         <table class="table table-bordered text-center">
             <tr>
-                <td><h4 id="player">Joueur 1</h4></td>
-                <td>
-                    <ul class="list-inline">
-                        <li><h4>Joueur 1</h4></li>
+                <td id="turnColor" class="align-middle" colspan="3"><h4 id="player"></h4></td>
+            </tr>
+            <tr>
+                <td scope="row">
+                    <ul class="list-unstyled">
+                        <li><h4 id="player1"></h4></li>
                         <li><h4 id="score1">0</h4></li>
                     </ul>
                 </td>
-                <td><ul class="list-inline">
+                <td scope="row"><ul class="list-unstyled">
                     <li><h4>Match Nul</h4></li>
                     <li><h4 id="draw">0</h4></li>
                 </ul></td>
-                <td>
-                    <ul class="list-inline">
-                        <li><h4>Joueur 2</h4></li>
+                <td scope="row">
+                    <ul class="list-unstyled">
+                        <li><h4 id="player2"></h4></li>
                         <li><h4 id="score2">0</h4></li>
                     </ul>
                 </td>

@@ -11,9 +11,13 @@ td {
 }
 
 .red, red:hover {
-    background-color: red;
+    background-color: #d51f1d;
 }
 
 .yellow, yellow:hover {
-    background-color: yellow;
+    background-color: #ffc107;
+}
+
+.hidden {
+    display: none;
 }
